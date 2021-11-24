@@ -22,7 +22,7 @@ public class UserService {
 
     }
     public User registrar(User user){
-        if(user.getId()==0){
+        if(user.getId()==null){
             if(existeEmail(user.getEmail())==false) {
                 return userRepository.save(user);
             }else {
